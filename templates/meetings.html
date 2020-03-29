@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Transcriptions of meeting: {{ meeting_transcriptions[0]['meeting_id'] }}</h3>
+    <br>
+    {% for t in meeting_transcriptions %}
+    <article class="media content-section">
+        <div class="media">
+            <div class="media-body">
+              <h5 class="mt-0" style= "color:#00a2ff;">{{t['speaker_name']}} &nbsp <small  style = "color:#444444;font-style:italic;font-size:xx-small;">{{t['spoken_at']}}</small></h5>
+              <hr style = "margin-bottom: 5px; margin-top: 5px;">
+                {{t['message']}}
+              
+              </div>
+            </div>
+    </article>
+    
+    {% endfor %}
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% if umid|length == 0 %}
+    <h3>There are no meetings transcriptions available.</h3>
+    <br>
+    {% else %}
+    <h3>Which meeting would you like to view?</h3>
+    <br>
+    {% endif %}
+    {% for id in umid %}
+      
+    <article class="media content-section">
+        <div class="media-body">
+            <a href="/meetings?id={{id}}">{{id}}</a>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
