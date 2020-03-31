@@ -1,2 +1,2 @@
 # meeting_application
-meeting application case study
+Application Built in python/flask
