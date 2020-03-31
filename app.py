@@ -142,11 +142,7 @@ def show_meeting_transcript():
 		return 'Meeting does not exist!'
 	meeting_transcriptions = [t.serialize() for t in specific_transcriptions]
 
-	length = len(meeting_transcriptions)
-	for_sorting = [(meeting_transcriptions[i]['spoken_at'],i) for i in range(length)]
-
-	sorted_timings = sorted(for_sorting, key=lambda tup: tup[0], reverse = True)
-	sorted_meeting_transcriptions = [meeting_transcriptions[i[1]] for i in sorted_timings]
+	sorted_meeting_transcriptions = sorted(meeting_transcriptions, key=lambda tup: tup['spoken_at'], reverse = True)
 	return render_template('meetings.html', meeting_transcriptions = sorted_meeting_transcriptions, title = "meeting transcriptions")
 
 if __name__ == '__main__':
