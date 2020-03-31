@@ -6,7 +6,7 @@ class transcription(db.Model):
 	meeting_id = db.Column(db.String, nullable=False)
 	speaker_name = db.Column(db.String, nullable=False)
 	message = db.Column(db.String, nullable=False)
-	spoken_at = db.Column(db.DateTime)
+	spoken_at = db.Column(db.DateTime, nullable=False)
 
 	def __init__(self, meeting_id, speaker_name, message, spoken_at):
 		self.meeting_id = meeting_id
