@@ -133,7 +133,6 @@ def get_all_meetings():
 
 @app.route('/meetings', methods = ['GET'])
 def show_meeting_transcript():
-	#remember to negative slice
 	meeting_id = request.args.get('id')
 	specific_transcriptions = transcription.query.filter_by(meeting_id = meeting_id).all()
 
