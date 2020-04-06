@@ -1,2 +1,5 @@
 # meeting_application
-Application Built in python/flask
+
+A sample meeting application that takes in meeting minutes and displays them. 
+
+Built in python/flask
